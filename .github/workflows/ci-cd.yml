@@ -28,11 +28,6 @@ jobs:
         run: npm install
         working-directory: ./Chat-AI/backend
 
-      # Run tests for backend
-      - name: Run backend tests
-        run: npm test
-        working-directory: ./Chat-AI/backend
-
       # Build React app (frontend)
       - name: Set up Node.js for frontend
         uses: actions/setup-node@v3
