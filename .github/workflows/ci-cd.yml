@@ -73,7 +73,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
           SOURCE_DIR: './Chat-AI/frontend/build'
-          DEST_DIR: 's3://${{ secrets.AWS_S3_BUCKET }}'
+          DEST_DIR: 's3://${{ secrets.S3_BUCKET }}'
 
   # Job 3: Deploy Node.js backend to Elastic Beanstalk
   deploy_backend:
@@ -92,7 +92,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: ${{ secrets.AWS_EB_REGION }}
 
       # Install dependencies and build backend
       - name: Install dependencies for backend
