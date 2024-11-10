@@ -22,7 +22,7 @@ jobs:
       - name: Set up Node.js for backend
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
           
       - name: Install dependencies for backend
         run: npm install
@@ -32,7 +32,7 @@ jobs:
       - name: Set up Node.js for frontend
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
           
       - name: Install dependencies and build frontend
         run: |
@@ -55,7 +55,7 @@ jobs:
       - name: Set up Node.js for frontend
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
           
       - name: Install dependencies and build frontend
         run: |
