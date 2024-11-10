@@ -107,5 +107,5 @@ jobs:
       # Deploy to Elastic Beanstalk
       - name: Deploy backend to Elastic Beanstalk
         run: |
-          aws elasticbeanstalk create-application-version --application-name ${{ secrets.EB_APP_NAME }} --version-label $GITHUB_SHA --source-bundle S3Bucket="${{ secrets.S3_BUCKET }}",S3Key="backend.zip"
-          aws elasticbeanstalk update-environment --environment-name ${{ secrets.EB_ENV_NAME }} --version-label $GITHUB_SHA
+          aws elasticbeanstalk create-application-version --application-name ${{ secrets.AWS_EB_REGION }} --version-label $GITHUB_SHA --source-bundle S3Bucket="${{ secrets.AWS_EB_REGION }}",S3Key="backend.zip"
+          aws elasticbeanstalk update-environment --environment-name ${{ secrets.AWS_EB_NAME }} --version-label $GITHUB_SHA
